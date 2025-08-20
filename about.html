@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about BrainStack Studios - Our mission, vision, and the team behind our innovative IT solutions">
+    <title>About Us | BrainStack Studios</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            background: teal;
+            /* background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%); */
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card i {
+            font-size: 2.5rem;
+            color: teal;
+            margin-bottom: 20px;
+        }
+        
+        .team-section {
+            background: #f9f9ff;
+            padding: 80px 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member-image {
+            height: 310px;
+            background: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .member-info h4 {
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        
+        .member-info p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #6e8ffb25;
+        }
+        
+        .cta-section {
+            /* background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%); */
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-top: 60px;
+            border-radius: 10px;
+            background: #f9f9f9;
+            /* background:
+  linear-gradient(217deg, rgb(255 0 0 / 0.8), transparent 70.71%),
+  linear-gradient(127deg, rgb(0 255 0 / 0.8), transparent 70.71%),
+  linear-gradient(336deg, rgb(0 0 255 / 0.8), transparent 70.71%); */
+        }
+
+        .footer-contact h3 p{
+           color: white;
+        }
+
+        
+        @media (max-width: 768px) {
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 40px auto 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/PM.png" alt="BrainStack Studios Logo">
+                    <span  style="color: teal;">BrainStack  Studios</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="developers.html" class="nav-link">Our Team</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li class="nav-item auth-buttons">
+                        <a href="###" class="btn btn-outline" id="loginBtn">Login</a>
+                        <a href="#" class="btn btn-primary" id="registerBtn">Register</a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container"><br><br><br>
+            <h1  style="color: white;">About BrainStack Studios</h1>
+            <p  style="color: white;">Innovating the future, one line of code at a time</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>Founded in 2023, BrainStack Studios emerged from a shared vision to revolutionize the IT industry through innovative solutions and cutting-edge technology. We started as a small team of passionate developers and we have grown into a full-service IT solutions provider, helping businesses of all sizes achieve their digital transformation goals.</p>
+            
+            <div class="mission-vision">
+                <div class="card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To empower businesses through innovative technology solutions that drive growth, efficiency, and competitive advantage in the digital landscape.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be the most trusted and innovative IT solutions partner, recognized for our commitment to excellence and customer success.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Our Values</h3>
+                    <p>Innovation, Integrity, Excellence, Collaboration, and Customer-Centric Approach are the core values that guide everything we do.</p>
+                </div>
+            </div>
+            
+            <h2>Why Choose Us?</h2>
+            <p>At BrainStack Studios, we combine technical expertise with creative problem-solving to deliver solutions that make a real difference. Our team of certified professionals stays ahead of industry trends to provide you with the most effective and efficient solutions.</p>
+            
+            <ul style="margin: 20px 0 20px 20px; line-height: 1.8;">
+                <li>Proven track record of successful projects</li>
+                <li>Dedicated team of experts</li>
+                <li>Customized solutions for your unique needs</li>
+                <li>24/7 support and maintenance</li>
+                <li>Competitive pricing with no hidden costs</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Team</span>
+                <h2 class="section-title">Meet the Experts</h2>
+                <p>The brilliant minds behind our success</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('assets/images/developers/alexxx.jpeg');"></div>
+                    <div class="member-info">
+                        <h4>Mr.Kochens</h4>
+                        <p>CEO & Founder</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/alex-kochens-862347337/"><i class="fab fa-linkedin" style="color: black;"></i></a>
+                            <a href="https://x.com/Mushabenta70565?t=pTPkHACR4ZTjx5ZGRFuSPw&s=09"><i class="fab fa-twitter" style="color: black;"></i></a>
+                            <a href="https://github.com/ALEXKOCHENS/"><i class="fab fa-github"  style="color: black;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('assets/images/developers/linic.jpg');"></div>
+                    <div class="member-info">
+                        <h4>Mushabenta </h4>
+                        <p>CTO</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"  style="color: black;"></i></a>
+                            <a href="#"><i class="fab fa-twitter"  style="color: black;"></i></a>
+                            <a href="#"><i class="fab fa-github"  style="color: black;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="team-member">
+                    <div class="member-image" style="background-image: url('assets/images/PM.png');"></div>
+                    <div class="member-info">
+                        <h4>Michael Johnson</h4>
+                        <p>Lead Developer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"  style="color: black;"></i></a>
+                            <a href="#"><i class="fab fa-twitter"   style="color: black;"></i></a>
+                            <a href="#"><i class="fab fa-github"  style="color: black;"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- <div class="team-member">
+                    <div class="member-image" style="background-image: url('assets/images/PM.png');"></div>
+                    <div class="member-info">
+                        <h4>Sarah Williams</h4>
+                        <p>UX/UI Designer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"  style="color: black;"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"  style="color: black;"></i></a>
+                            <a href="#"><i class="fab fa-behance"  style="color: black;"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <div class="container">
+        <div class="cta-section">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's turn your ideas into reality. Get in touch with us today to discuss how we can help your business grow.</p>
+            <div class="readyForProject">
+                <a href="contact.html">
+                    <button class="btn btn-primary" >Contact Us</button>
+                </a>
+            </div>
+        </div>
+
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember-me">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <p class="auth-switch">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create an Account</h2>
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <div class="form-group terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                <p class="auth-switch">Already have an account? <a href="#" id="showLogin">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    </div><br><br><br><br><br><br><br>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/PM.png" alt="BrainStack Studios Logo">
+                        <span  style="color: teal;">BrainStack Studios</span>
+                    </a>
+                    <p>Innovative IT solutions for the digital age. We help businesses transform and thrive in the digital landscape.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Mushabenta70565?t=pTPkHACR4ZTjx5ZGRFuSPw&s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/alex-kochens-862347337/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ALEXKOCHENS/"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="developers.html">Our Team</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile App Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Cloud Solutions</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                        <li><a href="#">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3  style="color: white;">Contact Us</h3>
+                    <p  style="color: white;"><i class="fas fa-map-marker-alt"></i> Victoria University, Kampala, Uganda</p>
+                    <p  style="color: white;"><i class="fas fa-phone"></i> +256 707 764 215</p>
+                    <a href="mailto:brainstackstudios99@gmail.com"><p  style="color: white;"><i class="fas fa-envelope"></i> brainstackstudios99@gmail.com</p></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BrainStack Studios. All Rights Reserved.</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/menu.js"></script>
+</body>
+</html>
